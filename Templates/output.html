@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SoftScout Output</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<header>
+    <nav>
+        <a href="/"><img src="static/assets/SoftScoutShort.png" width="50px"></a>
+    </nav>
+</header>
+<body>
+{%block content%}
+<div class="limiter">
+	<div class="container-table100">
+		<div class="wrap-table100">
+			<br>
+			<br>
+			<div class="table100 ver6 m-b-110">
+				<table data-vertable="ver6">
+					<thead>
+						<tr class="row100 head">
+							<th class="column100 column1" data-column="column1">Relevance Ranking</th>
+							<th class="column100 column2" data-column="column2">Product Name</th>
+							<th class="column100 column3" data-column="column3">Product URL</th>
+							<th class="column100 column4" data-column="column4">Product Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for row in competitor_dict %}
+						        <tr>
+											<td class="column100 column1" data-column="column1">{{row.rank}}</td>
+											<td class="column100 column2" data-column="column2">{{row.title}}</td>
+											<td class="column100 column3" data-column="column3"><a href={{row.link}}>{{row.link}}</a></td>
+											<td class="column100 column4" data-column="column4">{{row.description}}</td>
+						        </tr>
+						        {% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<a href="/">Back</a>
+	</div>
+	{%endblock%}
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

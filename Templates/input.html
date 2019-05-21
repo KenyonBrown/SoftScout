@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SoftScout Input</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{url_for('static', filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='vendor/perfect-scrollbar/perfect-scrollbar.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}">
+<!--===============================================================================================-->
+</head>
+<header>
+    <nav>
+    <a href="/"><img src="static/assets/SoftScoutShort.png" width="50px"></a>
+    </nav>
+</header>
+<body>
+{%block content%}
+<div class="limiter">
+	<div class="container-table100">
+<h2><strong>SoftScout</strong> identifies competitive SaaS providers to help solve business needs.</h2>
+		<div class="wrap-table100">
+							<form action="/scout" method="POST">
+							<div class="search-form">
+								<div class="control-group">
+									<label class="url-field-label" for="url">Enter a SaaS Product URL:</label>
+									<input type="text" class="url-field" value="" placeholder="https://www.Example-Product.com" name="url">
+									<br>
+								</div>
+								<div class="control-group">
+									<label class="num-field-label" for="num">Select the Amount to Scout:</label>
+									<select name="num">
+									    <option value="1">1</option>
+									  	<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+										 	<option value="22">22</option>
+										 	<option value="23">23</option>
+										 	<option value="24">24</option>
+										 	<option value="25">25</option>
+									  </select>
+								</div>
+								<br>
+								<br>
+								  <input type="submit" value="Scout" class="submission" >
+								</div>
+							</form>
+
+			</div>
+		</div>
+	</div>
+	{%endblock%}
+
+
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
