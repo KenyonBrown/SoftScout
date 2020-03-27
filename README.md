@@ -13,9 +13,8 @@ This Flask app was created as a personal project to make it easier to discover a
 ## Solution
 
 - The Searcher.py program takes in user input and scrapes Google's related search functionality and returns a dictionary of the results
-- The Beautifulsoup and Requests modules ended up being our main tools for allowing the program to function
-- Built an HTML file that connected to Searcher.py via Flask and took in the user input and displayed the dictionary of results as a table
-- Built the CSS file that styled the site and make it more user friendly
+- Scraping is powered via Beautifulsoup and Request modules
+- User interface is a Flask application linked to a cascading style sheet
 
 
 ## Possible Next Steps
